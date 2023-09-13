@@ -69,7 +69,18 @@ main p {
     margin: 0;
     padding: 10px; /* Lägg till padding på mobila enheter för att undvika avskärning */
 }
+.Vavada{
+    grid-row: 4;
+    border: none;
+    grid-column: 2;
+    font-size: 30px;
+    text-align: center;
+    margin: auto;
+}
 
+img{
+    height: 100px;
+}
 .round-1 {
     grid-column: 1;
 }
