@@ -1,0 +1,171 @@
+/* Grundläggande stilar för större skärmar */
+body {
+    display: grid;
+    width: 60%;
+    height: 100vh;
+    grid-template-rows: 50px auto 300px;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    background-color: darkslateblue;
+    margin: 0;
+    font-size: 20px; /* För att texten inte ska vara för liten på mobila enheter */
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto 150px;
+    background-color: black;
+    align-items: center; /* Centrera innehållet vertikalt */
+}
+
+h1 {
+    color: red;
+    text-align: center;
+    margin: 0; /* Ta bort marginalen på mobila enheter */
+    padding-left: 20px; /* Lägg till padding på mobila enheter för att undvika avskärning */
+}
+
+header button {
+    margin-top: 10px; /* Justera knappmarginal på mobila enheter */
+    margin-bottom: 10px; /* Justera knappmarginal på mobila enheter */
+    border: 2px solid black;
+    background-color: gray;
+    color: green;
+    border-radius: 40%;
+    text-align: center;
+    font-size: 16px; /* Justera textstorlek på mobila enheter */
+}
+
+main {
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-columns: auto auto auto;
+    gap: 10px; /* Lägg till mellanrum mellan elementen */
+    padding: 10px; /* Lägg till padding på mobila enheter för att undvika avskärning */
+}
+main li{
+    list-style-type: none;
+    display: flex;
+    width: auto;
+    height: auto;
+}
+main div {
+    border: 2px solid;
+    width: auto;
+    height: auto;
+    padding: 0;
+    font-size: 16px; /* Justera textstorlek på mobila enheter */
+    box-sizing: border-box; /* Använd box-sizing för att inkludera border i elementets storlek */
+}
+
+main p {
+    background-color: gray;
+    text-align: center;
+    color: red;
+    margin: 0;
+    padding: 10px; /* Lägg till padding på mobila enheter för att undvika avskärning */
+}
+
+.round-1 {
+    grid-column: 1;
+}
+.match1 {
+    grid-row: 1;
+}
+.match2 {
+    grid-row: 3;
+}
+.match3 {
+    grid-row: 5;
+}
+.match4 {
+    grid-row: 7;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input {
+    margin: 0;
+}
+.Vavada {
+    border: none;
+    grid-row: 4;
+}
+.round-2 {
+    grid-column: 2;
+}
+.semifinal1 {
+    grid-column: 2;
+    margin-left: 20px;
+    grid-row: 2;
+}
+.semifinal2 {
+    margin-left: 20px;
+    grid-row: 6;
+}
+
+.round-3 {
+    display: grid;
+    margin-left: 20px;
+    grid-column: 3;
+    grid-row: 4;
+}
+
+footer {
+    grid-template-columns: 50px 50px 50px auto;
+    display: flex;
+}
+
+footer section {
+    margin-top: 20px;
+}
+footer label,
+footer input {
+    margin-right: 30px;
+}
+footer.margin {
+    margin-left: 30px;
+}
+section h2 {
+    background-color: black;
+    color: red;
+    margin: 0;
+    font-size: 20px;
+}
+h2 {
+    padding-left: 40px;
+}
+
+/* Anpassa stilar för mindre skärmar (t.ex. mobiler) */
+@media (max-width: 768px) {
+    body {
+        width: 100%; /* Ta upp hela bredden på mobila enheter */
+        grid-template-rows: 100px auto 100px; /* Justera rader för mobila enheter */
+        font-size: 14px; /* Justera textstorlek för mobila enheter */
+    }
+
+    header h1 {
+        padding-left: 0; /* Ta bort padding på mobila enheter */
+    }
+
+    header button {
+        margin-top: 5px; /* Justera knappmarginal för mobila enheter */
+        margin-bottom: 5px; /* Justera knappmarginal för mobila enheter */
+        font-size: 14px; /* Justera textstorlek för mobila enheter */
+    }
+
+    main p {
+        padding: 5px; /* Lägg till mindre padding på mobila enheter */
+    }
+
+    
+    footer {
+        flex-direction: column; /* Ändra riktningen på flex-container för mindre skärmar */
+        text-align: center; /* Justera textinriktningen för mindre skärmar */
+    }
+}
