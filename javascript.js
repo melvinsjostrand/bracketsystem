@@ -1,21 +1,42 @@
 
         // Declare playerNames outside of functions
-        const playerNames = [];
+        let playerNames = [];
+        let scoreInputs = [];
+        let playerInput = [];
 
         // JavaScript function to update the bracket with player names
         function init() 
         {
+            scoreInputs = document.querySelectorAll('input[type="number"]');
+            playerInput = document.querySelectorAll('input[type="text"]');
             updateBracket();
-            clear = document.getElementById("btn1");
+            console.log(playerInput);
+            let clear = document.getElementById("btn1");
             clear.addEventListener("click" , event=>{
                 resetTournament();
             })
-            playername = document.getElementsByClassName("name");
+            let playername = document.getElementsByClassName("name");
             for(Element of playername){
                 console.log(Element);
                 Element.addEventListener("input" , event=>{
                     updateBracket();
                 })
+            }
+           // let i = 0;
+            /*scoreInputs.forEach((input) => {
+                input.addEventListener("change", function () {
+                    //console.log("input " + input.name.substring(5,6) + " " + input.name.substring(12,13));
+                    updateScore(i);
+                    i++;
+                });
+            });*/
+
+            for(let i = 1;i < scoreInputs.length;i+=2){
+                scoreInputs[i].addEventListener("change", function () {
+                    //console.log("input " + input.name.substring(5,6) + " " + input.name.substring(12,13));
+                    updateScore(i);
+                    i++;
+                });
             }
         } // End init
         window.onload = init; // Se till att init aktiveras då sidan är inladdad
@@ -47,23 +68,35 @@
             });*/
 
         // JavaScript function to update the winner of each round based on scores
-        function updateScore() {
-            const scoreInputs = gameContainer.querySelectorAll('input[type="number"]');
-            const score1 = parseFloat(scoreInputs[0].value);
-            const score2 = parseFloat(scoreInputs[1].value);
+        function updateScore(index) {
+            console.log("index " + index);
+            const scoreInputs = document.querySelectorAll('input[type="number"]');
+            const score1 = parseFloat(scoreInputs[index-1].value);
+            const score2 = parseFloat(scoreInputs[index].value);
+
+            console.log("Score 1 " + score1);
+            console.log("score 2 " + score2);
         
             if (!isNaN(score1) && !isNaN(score2)) {
-                const winnerInput = gameContainer.querySelector('input[type="text"]');
+                console.log("Vinnare");
+                
+                //const winnerInput = document.querySelector('input[type="text"]');
                 if (score1 > score2) {
-                    winnerInput.value = playerNames[gameContainer.dataset.player1 - 1];
+                    console.log("Player 1");
+                    console.log("Spelare " + playerNames[index-1]);
+                    playerInput[index+7].value = playerNames[index-1];
+                    //winnerInput.value = playerNames[gameContainer.dataset.player1 - 1];
                 } else if (score2 > score1) {
-                    winnerInput.value = playerNames[gameContainer.dataset.player2 - 1];
+                    console.log("Player 2");
+                    console.log("Spelare " + playerNames[index]);
+                    playerInput[index+7].value = playerNames[index];
+                    //winnerInput.value = playerNames[gameContainer.dataset.player2 - 1];
                 } else {
-                    winnerInput.value = "Tie";
+                    //winnerInput.value = "Tie";
                 }
         
                 // Update Semifinalist 1 input when appropriate
-                if (gameContainer.classList.contains('round-1')) {
+                /*if (gameContainer.classList.contains('round-1')) {
                     const round2Game = gameContainer.nextElementSibling.querySelector('.game-top input[type="text"]');
                     if (round2Game) {
                         round2Game.value = winnerInput.value;
@@ -77,7 +110,7 @@
                             }
                         });
                     }
-                }
+                }*/
             }
         }
  
@@ -105,5 +138,5 @@
             for (let i = 0; i < winnerInputs.length; i++) {
                 winnerInputs[i].value = '';
             }
-            document.getElementById("btn1").onclick=resetTournament();
+            //document.getElementById("btn1").onclick=resetTournament();
         }
