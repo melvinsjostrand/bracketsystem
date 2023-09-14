@@ -6,11 +6,17 @@
         function init() 
         {
             updateBracket();
-            updateScore("Melvin");
             clear = document.getElementById("btn1");
             clear.addEventListener("click" , event=>{
                 resetTournament();
             })
+            playername = document.getElementsByClassName("name");
+            for(Element of playername){
+                console.log(Element);
+                Element.addEventListener("input" , event=>{
+                    updateBracket();
+                })
+            }
         } // End init
         window.onload = init; // Se till att init aktiveras då sidan är inladdad
         
@@ -41,7 +47,7 @@
             });*/
 
         // JavaScript function to update the winner of each round based on scores
-        function updateScore(input) {
+        function updateScore() {
             const scoreInputs = gameContainer.querySelectorAll('input[type="number"]');
             const score1 = parseFloat(scoreInputs[0].value);
             const score2 = parseFloat(scoreInputs[1].value);
