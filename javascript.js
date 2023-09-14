@@ -3,7 +3,22 @@
         const playerNames = [];
 
         // JavaScript function to update the bracket with player names
+        function init() 
+        {
+            updateBracket();
+            updateScore();
+            resetTournament();
+            clear = document.getElementById("btn1");
+            clear.addEventListener("click" , event=>{
+                resetTournament();
+            })
+        } // End init
+        window.onload = init; // Se till att init aktiveras då sidan är inladdad
+        
+
+
         function updateBracket() {
+
             playerNames.length = 0; // Clear the playerNames array
             for (let i = 1; i <= 8; i++) {
                 const playerName = document.getElementById(`player${i}`).value;
@@ -16,6 +31,8 @@
             }
         }
         
+        
+
         document.addEventListener("DOMContentLoaded", function () {
             const scoreInputs = document.querySelectorAll('input[type="number"]');
             scoreInputs.forEach((input) => {
@@ -84,4 +101,5 @@
             for (let i = 0; i < winnerInputs.length; i++) {
                 winnerInputs[i].value = '';
             }
+            document.getElementById("btn1").onclick=resetTournament();
         }

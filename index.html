@@ -6,112 +6,112 @@
     <script src="javascript.js" defer></script>
     <link rel="stylesheet" href="index.css">
     <title>Vavada tournament</title>
-    <style></style>
   </head>
   <body>
     <header>
       <h1>Vavada tournament</h1>
-      <button onclick="resetTournament()">Clear bracket </nutton>
+      <button onclick=resetTournament();>Clear bracket </button>
     </header>
     <!-- Section for Player Names -->
     <main id="tournament">
       <!-- Tournament bracket -->
-      <div class="round round-1 match1">
+      <div class=" round-1 match1">
         <!--player 1 vs player 2-->
         <!-- Matches in Round 1 -->
-        <li class="game game-top" data-player1="1" data-player2="2">
+        <section  >
           <input type="text" placeholder="Player 1" readonly>
           <input type="number" placeholder="Score">
-        </li>
-        <p>BRACKET 1</p>
-        <li class="game game-bottom" data-player1="1" data-player2="2">
+        </section>
+        <h2>BRACKET 1</h2>
+        <section  >
           <input type="text" placeholder="Player 2" readonly>
           <input type="number" placeholder="Score">
-        </li>
+        </section>
       </div>
-      <div class="round round-1 match2">
+      <div class=" round-1 match2">
         <!--player 3 vs player 4-->
         <!-- Matches in Round 1 -->
-        <li class="game game-top" data-player1="1" data-player2="2">
+        <section  >
           <input type="text" placeholder="Player 3" readonly>
           <input type="number" placeholder="Score">
-        </li>
-        <p>BRACKET 2</p>
-        <li class="game game-bottom" data-player1="1" data-player2="2">
+        </section>
+        <h2>BRACKET 2</h2>
+        <section  >
           <input type="text" placeholder="Player 4" readonly>
           <input type="number" placeholder="Score">
-        </li>
+        </section>
       </div>
-      <div class="round round-1 match3">
+      <div class=" round-1 match3">
         <!--player 5 vs player 6-->
         <!-- Matches in Round 1 -->
-        <li class="game game-top" data-player1="1" data-player2="2">
+        <section  >
           <input type="text" placeholder="Player 5" readonly>
           <input type="number" placeholder="Score">
-        </li>
-        <p>BRACKET 3</p>
-        <li class="game game-bottom" data-player1="1" data-player2="2">
+        </section>
+        <h2>BRACKET 3</h2>
+        <section  >
           <input type="text" placeholder="Player 6" readonly>
           <input type="number" placeholder="Score">
-        </li>
+        </section>
       </div>
-      <div class="round round-1 match4">
+      <div class=" round-1 match4">
         <!--player 7 vs player 8-->
         <!-- Matches in Round 1 -->
-        <li class="game game-top" data-player1="1" data-player2="2">
+        <section  >
           <input type="text" placeholder="Player 7" readonly>
           <input type="number" placeholder="Score">
-        </li>
-        <p>BRACKET 4</p>
-        <li class="game game-bottom" data-player1="1" data-player2="2">
+        </section>
+        <h2>BRACKET 4</h2>
+        <section  >
           <input type="text" placeholder="Player 8" readonly>
           <input type="number" placeholder="Score">
-        </li>
+        </section>
       </div>
       <!-- Add other rounds here -->
-      <div class="round round-2 semifinal1">
+      <div class=" round-2 semifinal1">
         <!-- Matches in Round 2 (Semifinals) -->
-        <li class="game game-top" data-player1="1" data-player2="2">
-          <input type="text" placeholder="Semifinalist 1" readonly>
+        <section>
+          <input type="text" placeholder="Semifinallist 1" readonly>
           <input type="number" placeholder="Score">
-        </li>
-        <p>Semifinal 1</p>
-        <li class="game game-bottom" data-player1="1" data-player2="2">
-          <input type="text" placeholder="Semifinalist 2" readonly>
+        </section>
+        <h3>Semifinal 1</h3>
+        <section  >
+          <input type="text" placeholder="Semifinallist 2" readonly>
           <input type="number" placeholder="Score">
-        </li>
+        </section>
       </div>
       <div class="Vavada">
-        <img src="vavada.png" alt="Vavada logo">
+        <img src="vavada.png" alt="vavadalogo">
       </div>
-      <div class="round round-2 semifinal2">
+
+      <div class=" round-2 semifinal2">
         <!-- Matches in Round 2 (Semifinals) -->
-        <li class="game game-top" data-player1="1" data-player2="2">
-          <input type="text" placeholder="Semifinalist 1" readonly>
+        <section  >
+          <input type="text" placeholder="Semifinallist 1" readonly>
           <input type="number" placeholder="Score">
-        </li>
-        <p>Semifinal 2</p>
-        <li class="game game-bottom" data-player1="1" data-player2="2">
-          <input type="text" placeholder="Semifinalist 2" readonly>
+        </section>
+        <h3>Semifinal 2</h3>
+        <section  >
+          <input type="text" placeholder="Semifinallist 2" readonly>
           <input type="number" placeholder="Score">
-        </li>
+        </section>
       </div>
-      <div class="round round-3">
+      <div class=" round-3">
         <!-- Match in Round 3 (Final) -->
-        <li class="game game-top" data-player1="1" data-player2="2">
-          <input type="text" placeholder="finalist 1" readonly>
+        <section  >
+          <input type="text" placeholder="finallist 1" readonly>
           <input type="number" placeholder="Score">
-        </li>
-        <p>final</p>
-        <li class="game game-bottom" data-player1="1" data-player2="2">
-          <input type="text" placeholder="finalist 2" readonly>
+        </section>
+        <h4>final</h4>
+        <section  >
+          <input type="text" placeholder="finallist 2" readonly>
           <input type="number" placeholder="Score">
-        </li>
+        </section>
       </div>
     </main>
     <footer>
       <section id="player-names">
-        <h2>Username</h2>
+        <h5>Username</h5>
         <!-- Input fields for all players -->
         <label for="player1"></label>
         <input type="text" id="player1" oninput="updateBracket()">
@@ -132,15 +132,15 @@
         <!-- Add more input fields as needed -->
       </section>
       <section class="rules">
-        <h2>Rules</h2>
+        <h5>Rules</h5>
         <p>Age:18+</p>
         <p>Vavada account</p>
-        <a href="https://linktr.ee/heatoncs">https://linktr.ee/heatoncs</a>
+        <a href="https://linktr.ee/heatoncs">https://linkktr.ee/heatoncs</a>
         <p>Answer in 30 seconds</p>
         <p>Command : !Vavada</p>
       </section>
-      <section>
-        <h2>Info</h2>
+      <section class="info">
+        <h5>Info</h5>
         <p class="margin">8 People will be drawn. <br> All users compete in bonus highest win goes to next bracket final. <br>Winner will get a 100$ Bonus where they will get the total bonus amout <br>and will get added to their account. </p>
       </section>
     </footer>
