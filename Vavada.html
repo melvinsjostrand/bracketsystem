@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="javascript.js" defer></script>
+    <link rel="stylesheet" href="vavada.css">
+    <title>Vavada tournament</title>
+  </head>
+  <body>
+    <header>
+      <h1>Vavada tournament</h1>
+      <button id="btn1">Clear bracket </button>
+    </header>
+    <!-- Section for Player Names -->
+    <main id="tournament">
+      <!-- Tournament bracket -->
+      <div class=" round-1 match1">
+        <!--player 1 vs player 2-->
+        <!-- Matches in Round 1 -->
+        <section  >
+          <input type="text" placeholder="Player 1" readonly name="place1-match1-name">
+          <input type="number" placeholder="Score" name="place1-match1-number">
+        </section>
+        <h2>BRACKET 1</h2>
+        <section  >
+          <input type="text" placeholder="Player 2" readonly name="place2-match1-name">
+          <input type="number" placeholder="Score" name="place2-match1-number">
+        </section>
+      </div>
+      <div class=" round-1 match2">
+        <!--player 3 vs player 4-->
+        <!-- Matches in Round 1 -->
+        <section  >
+          <input type="text" placeholder="Player 3" readonly name="place1-match2-name">
+          <input type="number" placeholder="Score" name="place1-match2-number">
+        </section>
+        <h2>BRACKET 2</h2>
+        <section  >
+          <input type="text" placeholder="Player 4" readonly name="place2-match2-name">
+          <input type="number" placeholder="Score" name="place2-match2-number">
+        </section>
+      </div>
+      <div class=" round-1 match3">
+        <!--player 5 vs player 6-->
+        <!-- Matches in Round 1 -->
+        <section  >
+          <input type="text" placeholder="Player 5" readonly name="place1-match2-name">
+          <input type="number" placeholder="Score" name="place1-match2-number">
+        </section>
+        <h2>BRACKET 3</h2>
+        <section  >
+          <input type="text" placeholder="Player 6" readonly name="place2-match2-name">
+          <input type="number" placeholder="Score" name="place2-match2-number">
+        </section>
+      </div>
+      <div class=" round-1 match4">
+        <!--player 7 vs player 8-->
+        <!-- Matches in Round 1 -->
+        <section  >
+          <input type="text" placeholder="Player 7" readonly name="place1-match2-name">
+          <input type="number" placeholder="Score" name="place1-match2-number">
+        </section>
+        <h2>BRACKET 4</h2>
+        <section  >
+          <input type="text" placeholder="Player 8" readonly name="place2-match2-name">
+          <input type="number" placeholder="Score" name="place2-match2-number">
+        </section>
+      </div>
+      <!-- Add other rounds here -->
+      <div class=" round-2 semifinal1">
+        <!-- Matches in Round 2 (Semifinals) -->
+        <section>
+          <input type="text" placeholder="Semifinallist 1" readonly name="semifinalplace1-match1-name">
+          <input type="number" placeholder="Score" name="semifinalplace1-match1-number">
+        </section>
+        <h2>Semifinal 1</h2>
+        <section  >
+          <input type="text" placeholder="Semifinallist 2" readonly name="semifinalplace2-match1-name">
+          <input type="number" placeholder="Score" name="semifinalplace2-match1-number">
+        </section>
+      </div>
+
+      <p><img src="vavada.png" alt=""></p>
+
+
+      <div class=" round-2 semifinal2">
+        <!-- Matches in Round 2 (Semifinals) -->
+        <section  >
+          <input type="text" placeholder="Semifinallist 1" readonly name="semifinalplace1-match2-name">
+          <input type="number" placeholder="Score" name="semifinalplace1-match2-number">
+        </section>
+        <h2>Semifinal 2</h2>
+        <section  >
+          <input type="text" placeholder="Semifinallist 2" readonly name="semifinalplace2-match2-name">
+          <input type="number" placeholder="Score" name="semifinalplace2-match2-number">
+        </section>
+      </div>
+      <div class=" round-3">
+        <!-- Match in Round 3 (Final) -->
+        <section  >
+          <input type="text" placeholder="finallist 1" readonly name="finalplace1-match1-name">
+          <input type="number" placeholder="Score" name="finalplace1-match1-number">
+        </section>
+        <h2>final</h2>
+        <section  >
+          <input type="text" placeholder="finallist 2" readonly name="finalplace2-match1-name">
+          <input type="number" placeholder="Score" name="finalplace2-match1-number">
+        </section>
+      </div>
+      <!--<div class="vinnare">
+        <p class="p"><span>awdawdw vinnare
+          </span>
+          <span> summa       
+          </span>
+    </p>
+      </div> -->
+    </main>
+    <footer>
+      <section id="player-names">
+        <h5>Username</h5>
+        <!-- Input fields for all players -->
+        <label for="player1"></label>
+        <input type="text" id="player1" name="player1" class="name">
+        <label for="player2"></label>
+        <input type="text" id="player2" name="player2" class="name">
+        <label for="player3"></label>
+        <input type="text" id="player3" name="player3" class="name">
+        <label for="player4"></label>
+        <input type="text" id="player4" name="player4" class="name">
+        <label for="player5"></label>
+        <input type="text" id="player5" name="player5" class="name">
+        <label for="player6"></label>
+        <input type="text" id="player6" name="player6" class="name">
+        <label for="player7"></label>
+        <input type="text" id="player7" name="player7" class="name">
+        <label for="player8"></label>
+        <input type="text" id="player8" name="player8" class="name">
+        <!-- Add more input fields as needed -->
+      </section>
+      <section class="rules">
+        <h5>Rules</h5>
+        <p>Age:18+</p>
+        <p>Vavada account</p>
+        <a href="https://linktr.ee/heatoncs">https://linkktr.ee/heatoncs</a>
+        <p>Answer in 30 seconds</p>
+        <p>Command : !Vavada</p>
+      </section>
+      <section class="info">
+        <h5>Info</h5>
+        <p class="margin">8 People will be drawn. <br> All users compete in bonus highest win goes to next bracket final. <br>Winner will get a 100$ Bonus where they will get the total bonus amout <br>and will get added to their account. </p>
+      </section>
+    </footer>
+    <!-- Button to reset all player names and scores -->
+  </body>
+</html>

@@ -34,7 +34,7 @@ header {
 }
 
 h1 {
-    color: red;
+    color: rgb(255 ,40 ,74);
     text-align: center;
     margin: 0; /* Ta bort marginalen på mobila enheter */
   
@@ -75,36 +75,16 @@ main div {
     grid-column: 3;
     grid-row: 6;
 }
-.p{
-    width: 100%;
-    height: 100%;
-    margin: 0;
-}
-span{
-    width: 50%;
-    width: auto;
-    height: auto;
-}
+
+
 main section{
     display: flex;
 }
-h3
-{
-    background-color: rgb(21,20,26);
-    text-align: center;
-    color: red;
-    width: auto;
-    height: 100%;
-    margin: 0;
-    font-size: 2rem;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    display: inline-block;
-}
+
 h2{
     background-color: rgb(21,20,26);
     text-align: center;
-    color: red;
+    color: rgb(255 ,40 ,74);
     width: auto;
     height: 100%;
     margin: 0;
@@ -112,19 +92,7 @@ h2{
     border-left: 1px solid black;
     border-right: 1px solid black;
     display: inline-block;
-}
-
-h4 {
-    background-color: rgb(21,20,26);
-    text-align: center;
-    color: red;
-    width: auto;
-    height: 100%;
-    margin: 0;
-    font-size: 2rem;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    display: inline-block;
+    padding-left: 10px;
 }
 
 .round-1 {
@@ -164,9 +132,19 @@ input[type=number]{
 input {
     margin: 0;
 }
-.Vavada {
-    border: none;
-    grid-row: 4;
+main p{
+    height: auto;
+    width: auto;
+    grid-column: 2;
+    grid-row: 3/6;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 50px;
+    color: rgb(255 ,40 ,74);
+}
+
+img{
+    width: 200px;
 }
 .round-2 {
     display: grid;
@@ -219,7 +197,7 @@ section h5 {
     border-top:1px solid black;
     border-bottom:1px solid black;
     background-color: rgb(17 ,15, 20);
-    color: red;
+    color: rgb(255 ,40 ,74);
     margin: 0;
     font-size: 20px;
     margin-top: 20px;
@@ -230,11 +208,9 @@ footer p{
 }
 
 footer a{
-    color: red;
+    color: rgb(255 ,40 ,74);
 }
-h2 {
-    padding-left: 40px;
-}
+
 footer section :nth-child(2) {
 margin: 0;
 }

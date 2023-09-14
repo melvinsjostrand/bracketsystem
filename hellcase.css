@@ -1,0 +1,227 @@
+/* Grundläggande stilar för större skärmar */
+:root{
+    font-family:sans-serif;
+}
+html{
+    height: 100vh;
+    }
+
+
+body {
+    display: grid;
+    width: 98vh;
+    height: 100vh;
+    grid-template-rows: 50px auto 300px;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    background-color: rgb(36 ,31 ,46);
+    margin: 0;
+    font-size: 20px;
+    border: 2px solid black;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto 110px;
+    background-color: black;
+    align-items: center; /* Centrera innehållet vertikalt */
+    width: 100%;
+}
+
+h1 {
+    color: rgb(192 ,130 ,82);
+    text-align: center;
+    margin: 0; /* Ta bort marginalen på mobila enheter */
+  
+}
+
+header button {
+    border: 2px solid black;
+    background-color: gray;
+    color: rgb(181, 207 ,154);
+    border-radius: 30%;
+    text-align: center;
+    font-size: 16px; /* Justera textstorlek på mobila enheter */
+    margin-right: 10px;
+}
+
+main {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-columns: auto auto auto;
+    gap: 10px; /* Lägg till mellanrum mellan elementen */
+}
+main li{
+    list-style-type: none;
+}
+main div {
+    border-color: black;
+    border-style: solid;
+    border-width: 3px;
+    display: block;
+    bottom:5px;
+    right: 5px;
+}
+.vinnare{
+    border: none;
+    background-color: green;
+    grid-column: 3;
+    grid-row: 6;
+}
+.p{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+span{
+    width: 50%;
+    width: auto;
+    height: auto;
+}
+main section{
+    display: flex;
+}
+
+h2{
+    background-color: rgb(21,20,26);
+    text-align: center;
+    color: rgb(192 ,130 ,82);
+    width: auto;
+    height: 100%;
+    margin: 0;
+    font-size: 2rem;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    display: inline-block;
+}
+
+main p{
+    height: auto;
+    width: auto;
+    grid-column: 2;
+    grid-row: 3/6;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 50px;
+    color: rgb(192 ,130 ,82);
+    padding-left: 10px;
+}
+
+
+
+img{
+    width: 200px;
+}
+.round-1 {
+    display: grid;
+    grid-column: 1;
+}
+.match1 {
+    grid-row: 1;
+}
+.match2 {
+    grid-row: 3;
+}
+.match3 {
+    grid-row: 5;
+}
+.match4 {
+    grid-row: 7;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+main input[type=text]{
+    background-color: rgb(17 ,15 ,20);
+    border:1px solid black;
+    width: 50%;
+    color:white ;
+}
+input[type=number]{
+    background-color:rgb(50 ,47 ,59);
+    border:1px solid black;
+    width: 50%;
+    color: white;
+}
+input {
+    margin: 0;
+}
+
+.round-2 {
+    display: grid;
+    grid-column: 2;
+}
+.semifinal1 {
+    grid-column: 2;
+    margin-left: 20px;
+    grid-row: 2;
+}
+.semifinal2 {
+    margin-left: 20px;
+    grid-row: 6;
+}
+
+.round-3 {
+    display: grid;
+    margin-right: 20px;
+    grid-column: 3;
+    grid-row: 4;
+}
+
+footer {
+    width: 100%;
+    grid-template-columns: auto auto auto;
+    display: grid;
+}
+
+footer input[type=text]{
+    background-color: rgb(111, 106 ,124);
+    color: white;
+}
+footer label{
+    display: none;
+}
+footer input {
+    margin-right: 30px;
+    height: 15px;
+    width: 300px;
+    margin-top: 2px;
+    margin-bottom: 0;
+    display: flex;
+    margin-left: 5px;
+}
+
+.margin {
+    margin-left: 50px;
+}
+section h5 {
+    border-top:1px solid black;
+    border-bottom:1px solid black;
+    background-color: rgb(17 ,15, 20);
+    color: rgb(192 ,130 ,82);
+    margin: 0;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+footer p{
+    color: white;
+}
+
+footer a{
+    color: red;
+}
+
+footer section :nth-child(2) {
+margin: 0;
+}
