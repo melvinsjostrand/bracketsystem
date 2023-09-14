@@ -6,8 +6,7 @@
         function init() 
         {
             updateBracket();
-            updateScore();
-            resetTournament();
+            updateScore("Melvin");
             clear = document.getElementById("btn1");
             clear.addEventListener("click" , event=>{
                 resetTournament();
@@ -33,17 +32,16 @@
         
         
 
-        document.addEventListener("DOMContentLoaded", function () {
+       /* document.addEventListener("DOMContentLoaded", function () {
             const scoreInputs = document.querySelectorAll('input[type="number"]');
             scoreInputs.forEach((input) => {
                 input.addEventListener("input", function () {
                     updateScore(this);
                 });
-            });
+            });*/
 
         // JavaScript function to update the winner of each round based on scores
         function updateScore(input) {
-            const gameContainer = input.closest('.game');
             const scoreInputs = gameContainer.querySelectorAll('input[type="number"]');
             const score1 = parseFloat(scoreInputs[0].value);
             const score2 = parseFloat(scoreInputs[1].value);
@@ -79,8 +77,8 @@
  
         
             // Initialize the bracket when the page loads
-            updateBracket();
-        });
+          //  updateBracket();
+        //});
         
         
 

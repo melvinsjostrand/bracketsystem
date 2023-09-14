@@ -10,7 +10,7 @@
   <body>
     <header>
       <h1>Vavada tournament</h1>
-      <button onclick=resetTournament();>Clear bracket </button>
+      <button id="btn1">Clear bracket </button>
     </header>
     <!-- Section for Player Names -->
     <main id="tournament">
@@ -19,65 +19,65 @@
         <!--player 1 vs player 2-->
         <!-- Matches in Round 1 -->
         <section  >
-          <input type="text" placeholder="Player 1" readonly>
-          <input type="number" placeholder="Score">
+          <input type="text" placeholder="Player 1" readonly name="place1-match1-name">
+          <input type="number" placeholder="Score" name="place1-match1-number">
         </section>
         <h2>BRACKET 1</h2>
         <section  >
-          <input type="text" placeholder="Player 2" readonly>
-          <input type="number" placeholder="Score">
+          <input type="text" placeholder="Player 2" readonly name="place2-match1-name">
+          <input type="number" placeholder="Score" name="place2-match1-number">
         </section>
       </div>
       <div class=" round-1 match2">
         <!--player 3 vs player 4-->
         <!-- Matches in Round 1 -->
         <section  >
-          <input type="text" placeholder="Player 3" readonly>
-          <input type="number" placeholder="Score">
+          <input type="text" placeholder="Player 3" readonly name="place1-match2-name">
+          <input type="number" placeholder="Score" name="place1-match2-number">
         </section>
         <h2>BRACKET 2</h2>
         <section  >
-          <input type="text" placeholder="Player 4" readonly>
-          <input type="number" placeholder="Score">
+          <input type="text" placeholder="Player 4" readonly name="place2-match2-name">
+          <input type="number" placeholder="Score" name="place2-match2-number">
         </section>
       </div>
       <div class=" round-1 match3">
         <!--player 5 vs player 6-->
         <!-- Matches in Round 1 -->
         <section  >
-          <input type="text" placeholder="Player 5" readonly>
-          <input type="number" placeholder="Score">
+          <input type="text" placeholder="Player 5" readonly name="place1-match3-name">
+          <input type="number" placeholder="Score" name="place1-match3-number">
         </section>
         <h2>BRACKET 3</h2>
         <section  >
-          <input type="text" placeholder="Player 6" readonly>
-          <input type="number" placeholder="Score">
+          <input type="text" placeholder="Player 6" readonly name="place2-match3-name">
+          <input type="number" placeholder="Score" name="place2-match3-number">
         </section>
       </div>
       <div class=" round-1 match4">
         <!--player 7 vs player 8-->
         <!-- Matches in Round 1 -->
         <section  >
-          <input type="text" placeholder="Player 7" readonly>
-          <input type="number" placeholder="Score">
+          <input type="text" placeholder="Player 7" readonly name="place1-match4-name">
+          <input type="number" placeholder="Score" name="place1-match4-number">
         </section>
         <h2>BRACKET 4</h2>
         <section  >
-          <input type="text" placeholder="Player 8" readonly>
-          <input type="number" placeholder="Score">
+          <input type="text" placeholder="Player 8" readonly name="place2-match4-name">
+          <input type="number" placeholder="Score" name="place2-match4-number">
         </section>
       </div>
       <!-- Add other rounds here -->
       <div class=" round-2 semifinal1">
         <!-- Matches in Round 2 (Semifinals) -->
         <section>
-          <input type="text" placeholder="Semifinallist 1" readonly>
-          <input type="number" placeholder="Score">
+          <input type="text" placeholder="Semifinallist 1" readonly name="semifinalplace1-match1-name">
+          <input type="number" placeholder="Score" name="semifinalplace1-match1-number">
         </section>
         <h3>Semifinal 1</h3>
         <section  >
-          <input type="text" placeholder="Semifinallist 2" readonly>
-          <input type="number" placeholder="Score">
+          <input type="text" placeholder="Semifinallist 2" readonly name="semifinalplace2-match1-name">
+          <input type="number" placeholder="Score" name="semifinalplace2-match1-number">
         </section>
       </div>
       <div class="Vavada">
@@ -87,25 +87,25 @@
       <div class=" round-2 semifinal2">
         <!-- Matches in Round 2 (Semifinals) -->
         <section  >
-          <input type="text" placeholder="Semifinallist 1" readonly>
-          <input type="number" placeholder="Score">
+          <input type="text" placeholder="Semifinallist 1" readonly name="semifinalplace1-match2-name">
+          <input type="number" placeholder="Score" name="semifinalplace1-match2-number">
         </section>
         <h3>Semifinal 2</h3>
         <section  >
-          <input type="text" placeholder="Semifinallist 2" readonly>
-          <input type="number" placeholder="Score">
+          <input type="text" placeholder="Semifinallist 2" readonly name="semifinalplace2-match2-name">
+          <input type="number" placeholder="Score" name="semifinalplace2-match2-number">
         </section>
       </div>
       <div class=" round-3">
         <!-- Match in Round 3 (Final) -->
         <section  >
-          <input type="text" placeholder="finallist 1" readonly>
-          <input type="number" placeholder="Score">
+          <input type="text" placeholder="finallist 1" readonly name="finalplace1-match1-name">
+          <input type="number" placeholder="Score" name="finalplace1-match1-number">
         </section>
         <h4>final</h4>
         <section  >
-          <input type="text" placeholder="finallist 2" readonly>
-          <input type="number" placeholder="Score">
+          <input type="text" placeholder="finallist 2" readonly name="finalplace2-match1-name">
+          <input type="number" placeholder="Score" name="finalplace2-match1-number">
         </section>
       </div>
     </main>
