@@ -1,4 +1,12 @@
 /* Grundläggande stilar för större skärmar */
+:root{
+    font-family:sans-serif;
+}
+html{
+    height: 100vh;
+    }
+
+
 body {
     display: grid;
     width: 98vh;
@@ -8,17 +16,20 @@ body {
         "header"
         "main"
         "footer";
-    background-color: darkslateblue;
+    background-color: rgb(36 ,31 ,46);
     margin: 0;
-    font-size: 20px; /* För att texten inte ska vara för liten på mobila enheter */
+    font-size: 20px;
+    border: 2px solid black;
+    position: fixed;
+    top: 0;
+    bottom: 0;
 }
 
 header {
     display: grid;
-    grid-template-columns: auto 150px;
+    grid-template-columns: auto 110px;
     background-color: black;
     align-items: center; /* Centrera innehållet vertikalt */
-    border: 2px solid green;
     width: 100%;
 }
 
@@ -26,18 +37,17 @@ h1 {
     color: red;
     text-align: center;
     margin: 0; /* Ta bort marginalen på mobila enheter */
-    padding-left: 20px; /* Lägg till padding på mobila enheter för att undvika avskärning */
+  
 }
 
 header button {
-    margin-top: 10px; /* Justera knappmarginal på mobila enheter */
-    margin-bottom: 10px; /* Justera knappmarginal på mobila enheter */
     border: 2px solid black;
     background-color: gray;
-    color: green;
-    border-radius: 40%;
+    color: rgb(181, 207 ,154);
+    border-radius: 30%;
     text-align: center;
     font-size: 16px; /* Justera textstorlek på mobila enheter */
+    margin-right: 10px;
 }
 
 main {
@@ -47,7 +57,6 @@ main {
     grid-template-rows: auto auto auto auto auto auto auto;
     grid-template-columns: auto auto auto;
     gap: 10px; /* Lägg till mellanrum mellan elementen */
-    padding: 10px; /* Lägg till padding på mobila enheter för att undvika avskärning */
 }
 main li{
     list-style-type: none;
@@ -60,32 +69,64 @@ main div {
     bottom:5px;
     right: 5px;
 }
-
+.vinnare{
+    border: none;
+    background-color: green;
+    grid-column: 3;
+    grid-row: 6;
+}
+.p{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+span{
+    width: 50%;
+    width: auto;
+    height: auto;
+}
 main section{
     display: flex;
 }
-
-main h2,h3,h4 {
-    background-color: gray;
+h3
+{
+    background-color: rgb(21,20,26);
     text-align: center;
     color: red;
     width: auto;
-    height: auto;
+    height: 100%;
     margin: 0;
-    font-size: 1rem;
+    font-size: 2rem;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    display: inline-block;
 }
-.Vavada{
-    grid-row: 4;
-    border: none;
-    grid-column: 2;
-    font-size: 30px;
+h2{
+    background-color: rgb(21,20,26);
     text-align: center;
-    margin: auto;
+    color: red;
+    width: auto;
+    height: 100%;
+    margin: 0;
+    font-size: 2rem;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    display: inline-block;
 }
 
-img{
-    height: 100px;
+h4 {
+    background-color: rgb(21,20,26);
+    text-align: center;
+    color: red;
+    width: auto;
+    height: 100%;
+    margin: 0;
+    font-size: 2rem;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    display: inline-block;
 }
+
 .round-1 {
     display: grid;
     grid-column: 1;
@@ -102,15 +143,23 @@ img{
 .match4 {
     grid-row: 7;
 }
-input{
-    background-color: darkgray;
-    color: white;
-    width: 50%;
-}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+main input[type=text]{
+    background-color: rgb(17 ,15 ,20);
+    border:1px solid black;
+    width: 50%;
+    color:white ;
+}
+input[type=number]{
+    background-color:rgb(50 ,47 ,59);
+    border:1px solid black;
+    width: 50%;
+    color: white;
 }
 input {
     margin: 0;
@@ -135,7 +184,7 @@ input {
 
 .round-3 {
     display: grid;
-    margin-left: 20px;
+    margin-right: 20px;
     grid-column: 3;
     grid-row: 4;
 }
@@ -143,31 +192,45 @@ input {
 footer {
     width: 100%;
     grid-template-columns: auto auto auto;
-    display: flex;
+    display: grid;
 }
 
-
+footer input[type=text]{
+    background-color: rgb(111, 106 ,124);
+    color: white;
+}
 footer label{
     display: none;
 }
 footer input {
     margin-right: 30px;
-    height: 20px;
-    width: 200px;
+    height: 15px;
+    width: 300px;
     margin-top: 2px;
     margin-bottom: 0;
     display: flex;
     margin-left: 5px;
 }
+
 .margin {
     margin-left: 50px;
 }
 section h5 {
-    background-color: black;
+    border-top:1px solid black;
+    border-bottom:1px solid black;
+    background-color: rgb(17 ,15, 20);
     color: red;
     margin: 0;
     font-size: 20px;
     margin-top: 20px;
+}
+
+footer p{
+    color: white;
+}
+
+footer a{
+    color: red;
 }
 h2 {
     padding-left: 40px;
@@ -175,4 +238,3 @@ h2 {
 footer section :nth-child(2) {
 margin: 0;
 }
-
