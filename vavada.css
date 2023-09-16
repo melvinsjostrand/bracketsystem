@@ -18,7 +18,7 @@ body {
         "footer";
     background-color: rgb(36 ,31 ,46);
     margin: 0;
-    font-size: 20px;
+    font-size: 1.25rem;
     border: 2px solid black;
     position: fixed;
     top: 0;
@@ -47,7 +47,7 @@ header button {
     border-radius: 30%;
     text-align: center;
     font-size: 16px; /* Justera textstorlek på mobila enheter */
-    margin-right: 10px;
+    margin-right: 0.625rem;
 }
 
 main {
@@ -56,7 +56,7 @@ main {
     height: 100%;
     grid-template-rows: auto auto auto auto auto auto auto;
     grid-template-columns: auto auto auto;
-    gap: 10px; /* Lägg till mellanrum mellan elementen */
+    gap: 0.625rem; /* Lägg till mellanrum mellan elementen */
 }
 main li{
     list-style-type: none;
@@ -92,7 +92,7 @@ h2{
     border-left: 1px solid black;
     border-right: 1px solid black;
     display: inline-block;
-    padding-left: 10px;
+    padding-left: 0.625rem;
 }
 
 .round-1 {
@@ -137,14 +137,14 @@ main p{
     width: auto;
     grid-column: 2;
     grid-row: 3/6;
-    font-size: 20px;
+    font-size: 1.25rem;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 3.125rem;
     color: rgb(255 ,40 ,74);
 }
 
 img{
-    width: 200px;
+    width: 12.5rem;
 }
 .round-2 {
     display: grid;
@@ -152,17 +152,17 @@ img{
 }
 .semifinal1 {
     grid-column: 2;
-    margin-left: 20px;
+    margin-left: 1.25rem;
     grid-row: 2;
 }
 .semifinal2 {
-    margin-left: 20px;
+    margin-left: 1.25rem;
     grid-row: 6;
 }
 
 .round-3 {
     display: grid;
-    margin-right: 20px;
+    margin-right: 1.25rem;
     grid-column: 3;
     grid-row: 4;
 }
@@ -182,7 +182,7 @@ footer label{
 }
 footer input {
     margin-right: 30px;
-    height: 15px;
+    height: 0.938rem;
     width: 300px;
     margin-top: 2px;
     margin-bottom: 0;
@@ -191,7 +191,7 @@ footer input {
 }
 
 .margin {
-    margin-left: 50px;
+    margin-left: 3.125rem;
 }
 section h5 {
     border-top:1px solid black;
@@ -199,8 +199,8 @@ section h5 {
     background-color: rgb(17 ,15, 20);
     color: rgb(255 ,40 ,74);
     margin: 0;
-    font-size: 20px;
-    margin-top: 20px;
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
 }
 
 footer p{
