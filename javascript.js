@@ -126,6 +126,7 @@
             // Clear player names
             for (let i = 1; i <= 8; i++) {
                 document.getElementById(`player${i}`).value = '';
+                playerInput.length = 0;
             }
 
             // Clear scores and winner names
@@ -137,6 +138,7 @@
             const winnerInputs = document.querySelectorAll('input[type="text"]');
             for (let i = 0; i < winnerInputs.length; i++) {
                 winnerInputs[i].value = '';
+                playerNames.length = 0;
             }
             //document.getElementById("btn1").onclick=resetTournament();
         }

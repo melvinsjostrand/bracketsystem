@@ -2,10 +2,6 @@
 :root{
     font-family:sans-serif;
 }
-html{
-    height: 100vh;
-    }
-
 
 body {
     display: grid;
@@ -37,6 +33,7 @@ h1 {
     color: rgb(255 ,40 ,74);
     text-align: center;
     margin: 0; /* Ta bort marginalen på mobila enheter */
+    width: 100%;
   
 }
 
@@ -171,6 +168,7 @@ footer {
     width: 100%;
     grid-template-columns: auto auto auto;
     display: grid;
+    height: 100%;
 }
 
 footer input[type=text]{
