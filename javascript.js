@@ -103,7 +103,9 @@
                     //console.log("Ruta: " + playerInput[position].value);
                     //winnerInput.value = playerNames[gameContainer.dataset.player2 - 1];
                 } else {
-                    playerInput[position].value = playerNames[index];  //När semifinalen blir lika = undefined.
+                      //När semifinalen blir lika = undefined.
+                      //hur ska vi lägga upp det ifall det blir lika en match. just nu blir det pos++ vi måste göra så pos är samma som den va under den matchen
+                      
                 }
         
                 
