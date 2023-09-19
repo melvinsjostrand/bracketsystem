@@ -103,8 +103,7 @@
                     //console.log("Ruta: " + playerInput[position].value);
                     //winnerInput.value = playerNames[gameContainer.dataset.player2 - 1];
                 } else {
-                    playerInput[position].value = playerNames[index];
-                    //winnerInput.value = "Tie";
+                    playerInput[position].value = playerNames[index];  //När semifinalen blir lika = undefined.
                 }
         
                 
@@ -129,9 +128,12 @@
                 playerInput[i].value = '';
             }
 
-            playerNames = [];
+
+
             scoreInputs = [];
+            console.log(scoreInputs);
             playerInput = [];
+            console.log(playerInput);
         }
 
 
