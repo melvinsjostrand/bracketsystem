@@ -56,7 +56,29 @@ main div {
   right: 5px;
 }
 main .vinnare {
+  display: grid;
+  grid-template-columns: auto auto !important;
   border: none;
+  grid-row: 6;
+  grid-column: 3;
+}
+main .vinnare p {
+  color: white;
+  grid-row: 4;
+  grid-column: 1;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+main .vinnare input {
+  background-color: lightgreen !important;
+  grid-row: 4;
+  grid-column: 2;
+  border: none;
+  height: 50%;
+  margin-top: 15px;
+  color: black !important;
 }
 main section {
   display: flex;
