@@ -1,217 +1,190 @@
-/* Grundläggande stilar för större skärmar */
-:root{
-    font-family:sans-serif;
+:root {
+  font-family: sans-serif;
 }
 
 body {
-    display: grid;
-    width: 98vh;
-    height: 100vh;
-    grid-template-rows: 50px auto 300px;
-    grid-template-areas: 
-        "header"
-        "main"
-        "footer";
-    background-color: rgb(36 ,31 ,46);
-    margin: 0;
-    font-size: 1.25rem;
-    border: 2px solid black;
-    position: fixed;
-    top: 0;
-    bottom: 0;
+  display: grid;
+  width: 98vh;
+  height: 100vh;
+  grid-template-rows: 50px auto 300px;
+  grid-template-areas: "header" "main" "footer";
+  background-color: rgb(36, 31, 46);
+  margin: 0;
+  font-size: 1.25rem;
+  border: 2px solid black;
+  position: fixed;
+  top: 0;
+  bottom: 0;
 }
 
 header {
-    grid-area: "header";
-    display: grid;
-    grid-template-columns: auto 110px;
-    background-color: black;
-    align-items: center; /* Centrera innehållet vertikalt */
-    width: 100%;
+  grid-area: "header";
+  display: grid;
+  grid-template-columns: auto 110px;
+  background-color: black;
+  align-items: center;
+  width: 100%;
 }
-
-h1 {
-    color: rgb(255 ,40 ,74);
-    text-align: center;
-    margin: 0; /* Ta bort marginalen på mobila enheter */
-    width: 100%;
-  
+header h1 {
+  color: rgb(255, 40, 74);
+  text-align: center;
+  margin: 0;
+  width: 100%;
 }
-
 header button {
-    border: 2px solid black;
-    background-color: gray;
-    color: rgb(181, 207 ,154);
-    border-radius: 30%;
-    text-align: center;
-    font-size: 16px; /* Justera textstorlek på mobila enheter */
-    margin-right: 0.625rem;
+  border: 2px solid black;
+  background-color: gray;
+  color: rgb(181, 207, 154);
+  border-radius: 30%;
+  text-align: center;
+  font-size: 16px;
+  margin-right: 0.625rem;
 }
 
 main {
-    grid-area: "main";
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-rows: auto auto auto auto auto auto auto;
-    grid-template-columns: auto auto auto;
-    gap: 0.625rem; /* Lägg till mellanrum mellan elementen */
-}
-main li{
-    list-style-type: none;
+  grid-area: "main";
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: auto auto auto auto auto auto auto;
+  grid-template-columns: auto auto auto;
+  gap: 0.625rem;
 }
 main div {
-    border-color: black;
-    border-style: solid;
-    border-width: 3px;
-    display: block;
-    bottom:5px;
-    right: 5px;
+  border: 3px solid black;
+  bottom: 5px;
+  right: 5px;
 }
-.vinnare{
-    border: none;
-    background-color: green;
-    grid-column: 3;
-    grid-row: 6;
+main .vinnare {
+  border: none;
 }
-
-
-main section{
-    display: flex;
+main section {
+  display: flex;
 }
-
-h2{
-    background-color: rgb(21,20,26);
-    text-align: center;
-    color: rgb(255 ,40 ,74);
-    width: auto;
-    height: 100%;
-    margin: 0;
-    font-size: 2rem;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    display: inline-block;
-    padding-left: 0.625rem;
+main h2 {
+  background-color: rgb(21, 20, 26);
+  text-align: center;
+  color: rgb(255, 40, 74);
+  width: auto;
+  height: 100%;
+  margin: 0;
+  font-size: 2rem;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  display: inline-block;
+  padding-left: 0.625rem;
 }
-
-.round-1 {
-    display: grid;
-    grid-column: 1;
+main .round-1 {
+  display: grid;
+  grid-column: 1;
 }
-.match1 {
-    grid-row: 1;
+main .match1 {
+  grid-row: 1;
 }
-.match2 {
-    grid-row: 3;
+main .match2 {
+  grid-row: 3;
 }
-.match3 {
-    grid-row: 5;
+main .match3 {
+  grid-row: 5;
 }
-.match4 {
-    grid-row: 7;
+main .match4 {
+  grid-row: 7;
 }
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+main input::-webkit-outer-spin-button,
+main input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
-main input[type=text]{
-    background-color: rgb(17 ,15 ,20);
-    border:1px solid black;
-    width: 50%;
-    color:white ;
+main input[type=text] {
+  background-color: rgb(17, 15, 20);
+  border: 1px solid black;
+  width: 50%;
+  color: white;
 }
-input[type=number]{
-    background-color:rgb(50 ,47 ,59);
-    border:1px solid black;
-    width: 50%;
-    color: white;
+main input[type=number] {
+  background-color: rgb(50, 47, 59);
+  border: 1px solid black;
+  width: 50%;
+  color: white;
 }
-input {
-    margin: 0;
+main input {
+  margin: 0;
 }
-main p{
-    height: auto;
-    width: auto;
-    grid-column: 2;
-    grid-row: 3/6;
-    font-size: 1.25rem;
-    text-align: center;
-    padding-top: 3.125rem;
-    color: rgb(255 ,40 ,74);
+main p {
+  height: auto;
+  width: auto;
+  grid-column: 2;
+  grid-row: 3/6;
+  font-size: 1.25rem;
+  text-align: center;
+  padding-top: 3.125rem;
+  color: rgb(255, 40, 74);
 }
-
-img{
-    width: 12.5rem;
+main img {
+  height: auto;
+  width: 12.5rem;
 }
-.round-2 {
-    display: grid;
-    grid-column: 2;
+main .round-2 {
+  display: grid;
+  grid-column: 2;
 }
-.semifinal1 {
-    grid-column: 2;
-    margin-left: 1.25rem;
-    grid-row: 2;
+main .semifinal1 {
+  grid-column: 2;
+  margin-left: 1.25rem;
+  grid-row: 2;
 }
-.semifinal2 {
-    margin-left: 1.25rem;
-    grid-row: 6;
+main .semifinal2 {
+  margin-left: 1.25rem;
+  grid-row: 6;
 }
-
-.round-3 {
-    display: grid;
-    margin-right: 1.25rem;
-    grid-column: 3;
-    grid-row: 4;
+main .round-3 {
+  display: grid;
+  margin-right: 1.25rem;
+  grid-column: 3;
+  grid-row: 4;
 }
 
 footer {
-    grid-area: "footer";
-    width: 100%;
-    grid-template-columns: auto auto auto;
-    display: grid;
-    height: 100%;
+  grid-area: "footer";
+  width: 100%;
+  grid-template-columns: auto auto auto;
+  display: grid;
+  height: 100%;
 }
-
-footer input[type=text]{
-    background-color: rgb(111, 106 ,124);
-    color: white;
+footer input[type=text] {
+  background-color: rgb(111, 106, 124);
+  color: white;
 }
-footer label{
-    display: none;
+footer label {
+  display: none;
 }
 footer input {
-    margin-right: 30px;
-    height: 0.938rem;
-    width: 300px;
-    margin-top: 2px;
-    margin-bottom: 0;
-    display: flex;
-    margin-left: 5px;
+  margin-right: 30px;
+  height: 0.938rem;
+  width: 300px;
+  margin-top: 2px;
+  margin-bottom: 0;
+  display: flex;
+  margin-left: 5px;
 }
-
-.margin {
-    margin-left: 3.125rem;
+footer .margin {
+  margin-left: 3.125rem;
 }
-section h5 {
-    border-top:1px solid black;
-    border-bottom:1px solid black;
-    background-color: rgb(17 ,15, 20);
-    color: rgb(255 ,40 ,74);
-    margin: 0;
-    font-size: 1.25rem;
-    margin-top: 1.25rem;
+footer h5 {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: rgb(17, 15, 20);
+  color: rgb(255, 40, 74);
+  margin: 0;
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
 }
-
-footer p{
-    color: white;
+footer p {
+  color: white;
 }
-
-footer a{
-    color: rgb(255 ,40 ,74);
+footer a {
+  color: rgb(255, 40, 74);
 }
-
 footer section :nth-child(2) {
-margin: 0;
-}
+  margin: 0;
+}/*# sourceMappingURL=vavada.css.map */

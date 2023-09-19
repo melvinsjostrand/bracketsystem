@@ -126,21 +126,21 @@
             // Clear player names
             for (let i = 1; i <= 8; i++) {
                 document.getElementById(`player${i}`).value = '';
-                playerInput.length = 0;
             }
 
             // Clear scores and winner names
-            const scoreInputs = document.querySelectorAll('input[type="number"]');
             for (let i = 0; i < scoreInputs.length; i++) {
                 scoreInputs[i].value = '';
             }
 
-            const winnerInputs = document.querySelectorAll('input[type="text"]');
-            for (let i = 0; i < winnerInputs.length; i++) {
-                winnerInputs[i].value = '';
-                playerNames.length = 0;
+           
+            for (let i = 0; i < playerInput.length; i++) {
+                playerInput[i].value = '';
             }
-            //document.getElementById("btn1").onclick=resetTournament();
+
+            playerNames = [];
+            scoreInputs = [];
+            playerInput = [];
         }
 
 
