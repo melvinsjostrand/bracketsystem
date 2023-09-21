@@ -4,6 +4,7 @@
         let scoreInputs = [];
         let playerInput = [];
         let clear;
+        let pos;
 
         // JavaScript function to update the bracket with player names
         function init() 
@@ -24,23 +25,9 @@
                 })
             }
             
-            let pos = 8;
+            pos = 8;
             console.log("pos " + pos);
-            for(let i = 0;i < scoreInputs.length;i++){
-                scoreInputs[i].addEventListener("change", function () {
-                    console.log(scoreInputs[i]);
-                    updateScore(i,pos);
-                    if(i%2===0){
-                        console.log("hej " + i);
-                        i++;
-                    }else{
-                        console.log("hej " + i);
-                        i++;
-                        pos++;  
-                    }                    
-
-                });
-            }
+            ScoreInput();
         } // End init
         window.onload = init; // Se till att init aktiveras då sidan är inladdad
         
@@ -70,20 +57,19 @@
             let score2;
            
            
-            if(index%2===0){
+            /*if(index%2===0){
             
                 score1 = parseFloat(scoreInputs[index].value); //kan inte läsa av value andra rundan
                 score2 = parseFloat(scoreInputs[index+1].value);
-                console.log(score1);
-                console.log(score2);
-             
+
             }else{
          
                 score1 = parseFloat(scoreInputs[index-1].value); //kan inte läsa av value andra rundan
                 score2 = parseFloat(scoreInputs[index].value);
-                console.log(score1);
-                console.log(score2);
-            }            
+            
+            
+            
+            }            */
             
 
 
@@ -117,34 +103,28 @@
         
 
         // JavaScript function to reset the tournament
-        function resetTournament(i,pos) {
-            // Clear player names
-            for (let i = 1; i <= 8; i++) {
-                document.getElementById(`player${i}`).value = '';
-            }
-
-            // Clear scores and winner names
-            for (let i = 0; i < scoreInputs.length; i++) {
-                scoreInputs[i].value = '';
-            }
-
-           
-            for (let i = 0; i < playerInput.length; i++) {
-                playerInput[i].value = '';
-            }
-
-
-
-            scoreInputs = [];
-            console.log("score i clear knapp " + scoreInputs);
-            playerInput = [];
-            console.log("player i clear knapp " + playerInput);
-            pos = 8;
-            console.log("pos i clear knapp" + position);
-            i = 0;
-            console.log("i clear " + index);
+        function resetTournament() {
+            location.reload();
         }
 
 
-//position = 15 efter clear
+        function ScoreInput(){
+            scoreInputs = document.querySelectorAll('input[type="number"]');
+            console.log(scoreInputs);
+            for(let i = 0;i < scoreInputs.length;i++){
+                scoreInputs[i].addEventListener("change", function () {
+                    updateScore(i,pos);
+                    if(i%2===0){
+                        console.log("hej " + i);
+                        i++;
+                    }else{
+                        console.log("hej " + i);
+                        i++;
+                        pos++;  
+                    }                    
+
+                });
+            }
+        }
+
 //index = 1 men ska vara 0
