@@ -54,39 +54,39 @@ main{
     grid-template-columns: auto auto auto;
     gap: 0.625rem;
     
-    div{
-        border: 3px solid black;
-        bottom: 5px;
-        right: 5px;
-    }
-    .vinnare{
+        div{
+            border: 3px solid black;
+            bottom: 5px;
+            right: 5px;
+        }
 
-        display: grid;
-        grid-template-columns: auto auto !important; 
-        border: none;
-        grid-row: 6;
-        grid-column: 3;
-    }
-    .vinnare p {
-        color: white;
+        div:nth-child(9)  {
+            display: grid;
+            grid-template-columns: auto auto !important; 
+            border: none;
+            grid-row: 6;
+            grid-column: 3;
+    
+            > p {
+                color: white;
+                grid-row: 4;
+                grid-column: 1;
+                margin-bottom: 0;
+                padding-top: 0;
+                padding-right: 10px;
+                padding-left: 10px;
+            }
 
-        grid-row: 4;
-        grid-column: 1;
-        margin-bottom: 0;
-        padding-top: 0;
-        padding-right: 10px;
-        padding-left: 10px;
-    }
-    .vinnare input{
-        background-color: lightgreen !important;
-        grid-row: 4;
-        grid-column: 2;
-        border:none;
-        height: 50%;
-
-        color: black !important;
-    } 
-
+            input{
+                background-color: lightgreen !important;
+                grid-row: 4;
+                grid-column: 2;
+                border:none;
+                height: 50%;
+        
+                color: black !important;
+            } 
+        }
 
     section{
         display: flex;
@@ -105,21 +105,23 @@ main{
         display: inline-block;
         padding-left: 0.625rem;
     }
-
-    .round-1 {
+    div:nth-child(1),
+    div:nth-child(2),
+    div:nth-child(3),
+    div:nth-child(4){
         display: grid;
         grid-column: 1;
     }
-    .match1 {
+    div:nth-child(1) {
         grid-row: 1;
     }
-    .match2 {
+    div:nth-child(2) {
         grid-row: 3;
     }
-    .match3 {
+    div:nth-child(3) {
         grid-row: 5;
     }
-    .match4 {
+    div:nth-child(4){
         grid-row: 7;
     }
 
@@ -158,21 +160,22 @@ main{
     img{
         width: 100%;
     }
-    .round-2 {
+    div:nth-child(5),
+    div:nth-child(7) {
         display: grid;
         grid-column: 2;
     }
-    .semifinal1 {
+    div:nth-child(5) {
         grid-column: 2;
         margin-left: 1.25rem;
         grid-row: 2;
     }
-    .semifinal2 {
+    div:nth-child(7) {
         margin-left: 1.25rem;
         grid-row: 6;
     }
     
-    .round-3 {
+    div:nth-child(8) {
         display: grid;
         margin-right: 1.25rem;
         grid-column: 3;
@@ -203,8 +206,8 @@ footer{
         display: flex;
         margin-left: 5px;
     }
-    .margin {
-        margin-left: 3.125rem;
+    section:nth-child(3) > p {
+        margin-left: 2.125rem;
     }
     h5 {
         border-top:1px solid black;
