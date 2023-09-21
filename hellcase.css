@@ -55,6 +55,76 @@ main div {
   bottom: 5px;
   right: 5px;
 }
+main section {
+  display: flex;
+}
+main input::-webkit-outer-spin-button,
+main input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+main input[type=text] {
+  background-color: rgb(17, 15, 20);
+  border: 1px solid black;
+  width: 50%;
+  color: white;
+}
+main input[type=number] {
+  background-color: rgb(50, 47, 59);
+  border: 1px solid black;
+  width: 50%;
+  color: white;
+}
+main input {
+  margin: 0;
+}
+main h2 {
+  background-color: rgb(21, 20, 26);
+  text-align: center;
+  color: rgb(192, 130, 82);
+  width: auto;
+  height: 100%;
+  margin: 0;
+  font-size: 1.3rem;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  display: inline-block;
+  padding-left: 0.625rem;
+}
+main p {
+  height: auto;
+  width: auto;
+  grid-column: 2;
+  grid-row: 4;
+  font-size: 1.25rem;
+  text-align: center;
+  padding-top: 3.125rem;
+  color: rgb(192, 130, 82);
+  margin: 0;
+  padding: 0;
+}
+main img {
+  width: 100%;
+}
+main div:nth-child(1),
+main div:nth-child(2),
+main div:nth-child(3),
+main div:nth-child(4) {
+  display: grid;
+  grid-column: 1;
+}
+main div:nth-child(1) {
+  grid-row: 1;
+}
+main div:nth-child(2) {
+  grid-row: 3;
+}
+main div:nth-child(3) {
+  grid-row: 5;
+}
+main div:nth-child(4) {
+  grid-row: 7;
+}
 main div:nth-child(9) {
   display: grid;
   grid-template-columns: auto auto !important;
@@ -78,76 +148,6 @@ main div:nth-child(9) input {
   border: none;
   height: 50%;
   color: black !important;
-}
-main section {
-  display: flex;
-}
-main h2 {
-  background-color: rgb(21, 20, 26);
-  text-align: center;
-  color: rgb(192, 130, 82);
-  width: auto;
-  height: 100%;
-  margin: 0;
-  font-size: 1.3rem;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  display: inline-block;
-  padding-left: 0.625rem;
-}
-main div:nth-child(1),
-main div:nth-child(2),
-main div:nth-child(3),
-main div:nth-child(4) {
-  display: grid;
-  grid-column: 1;
-}
-main div:nth-child(1) {
-  grid-row: 1;
-}
-main div:nth-child(2) {
-  grid-row: 3;
-}
-main div:nth-child(3) {
-  grid-row: 5;
-}
-main div:nth-child(4) {
-  grid-row: 7;
-}
-main input::-webkit-outer-spin-button,
-main input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-main input[type=text] {
-  background-color: rgb(17, 15, 20);
-  border: 1px solid black;
-  width: 50%;
-  color: white;
-}
-main input[type=number] {
-  background-color: rgb(50, 47, 59);
-  border: 1px solid black;
-  width: 50%;
-  color: white;
-}
-main input {
-  margin: 0;
-}
-main p {
-  height: auto;
-  width: auto;
-  grid-column: 2;
-  grid-row: 4;
-  font-size: 1.25rem;
-  text-align: center;
-  padding-top: 3.125rem;
-  color: rgb(192, 130, 82);
-  margin: 0;
-  padding: 0;
-}
-main img {
-  width: 100%;
 }
 main div:nth-child(5),
 main div:nth-child(7) {
@@ -177,9 +177,14 @@ footer {
   display: grid;
   height: 100%;
 }
-footer input[type=text] {
-  background-color: rgb(111, 106, 124);
-  color: white;
+footer h5 {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: rgb(17, 15, 20);
+  color: rgb(192, 130, 82);
+  margin: 0;
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
 }
 footer label {
   display: none;
@@ -193,24 +198,19 @@ footer input {
   display: flex;
   margin-left: 5px;
 }
-footer section:nth-child(3) > p {
-  margin-left: 2.125rem;
-}
-footer h5 {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  background-color: rgb(17, 15, 20);
-  color: rgb(192, 130, 82);
-  margin: 0;
-  font-size: 1.25rem;
-  margin-top: 1.25rem;
+footer input[type=text] {
+  background-color: rgb(111, 106, 124);
+  color: white;
 }
 footer p {
   color: white;
 }
 footer a {
-  color: rgb(192, 130, 82);
+  color: rgb(255, 40, 74);
 }
 footer section :nth-child(2) {
   margin: 0;
+}
+footer section:nth-child(3) > p {
+  margin-left: 2.125rem;
 }/*# sourceMappingURL=hellcase.css.map */
