@@ -53,7 +53,7 @@ function updateScore(index, position) {
    let score2;
 
 
-   /*if(index%2===0){
+   if(index%2===0){
             
                 score1 = parseFloat(scoreInputs[index].value); //kan inte läsa av value andra rundan
                 score2 = parseFloat(scoreInputs[index+1].value);
@@ -65,7 +65,7 @@ function updateScore(index, position) {
             
             
             
-            }            */
+            }            
 
 
    if (!isNaN(score1) && !isNaN(score2)) {
@@ -119,5 +119,3 @@ function ScoreInput() {
       });
    }
 }
-
-//index = 1 men ska vara 0
