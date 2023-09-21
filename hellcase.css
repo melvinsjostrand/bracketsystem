@@ -55,8 +55,29 @@ main div {
   bottom: 5px;
   right: 5px;
 }
-main .vinnare {
+main div:nth-child(9) {
+  display: grid;
+  grid-template-columns: auto auto !important;
   border: none;
+  grid-row: 6;
+  grid-column: 3;
+}
+main div:nth-child(9) > p {
+  color: white;
+  grid-row: 4;
+  grid-column: 1;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+main div:nth-child(9) input {
+  background-color: lightgreen !important;
+  grid-row: 4;
+  grid-column: 2;
+  border: none;
+  height: 50%;
+  color: black !important;
 }
 main section {
   display: flex;
@@ -74,44 +95,23 @@ main h2 {
   display: inline-block;
   padding-left: 0.625rem;
 }
-main .vinnare {
-  display: grid;
-  grid-template-columns: auto auto !important;
-  border: none;
-  grid-row: 6;
-  grid-column: 3;
-}
-main .vinnare p {
-  color: white;
-  grid-row: 4;
-  grid-column: 1;
-  margin-bottom: 0;
-  padding-top: 0;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-main .vinnare input {
-  background-color: lightgreen !important;
-  grid-row: 4;
-  grid-column: 2;
-  border: none;
-  height: 50%;
-  color: black !important;
-}
-main .round-1 {
+main div:nth-child(1),
+main div:nth-child(2),
+main div:nth-child(3),
+main div:nth-child(4) {
   display: grid;
   grid-column: 1;
 }
-main .match1 {
+main div:nth-child(1) {
   grid-row: 1;
 }
-main .match2 {
+main div:nth-child(2) {
   grid-row: 3;
 }
-main .match3 {
+main div:nth-child(3) {
   grid-row: 5;
 }
-main .match4 {
+main div:nth-child(4) {
   grid-row: 7;
 }
 main input::-webkit-outer-spin-button,
@@ -142,27 +142,28 @@ main p {
   font-size: 1.25rem;
   text-align: center;
   padding-top: 3.125rem;
-  color: rgb(255, 40, 74);
+  color: rgb(192, 130, 82);
   margin: 0;
   padding: 0;
 }
 main img {
   width: 100%;
 }
-main .round-2 {
+main div:nth-child(5),
+main div:nth-child(7) {
   display: grid;
   grid-column: 2;
 }
-main .semifinal1 {
+main div:nth-child(5) {
   grid-column: 2;
   margin-left: 1.25rem;
   grid-row: 2;
 }
-main .semifinal2 {
+main div:nth-child(7) {
   margin-left: 1.25rem;
   grid-row: 6;
 }
-main .round-3 {
+main div:nth-child(8) {
   display: grid;
   margin-right: 1.25rem;
   grid-column: 3;
@@ -192,8 +193,8 @@ footer input {
   display: flex;
   margin-left: 5px;
 }
-footer .margin {
-  margin-left: 3.125rem;
+footer section:nth-child(3) > p {
+  margin-left: 2.125rem;
 }
 footer h5 {
   border-top: 1px solid black;

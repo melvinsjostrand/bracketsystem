@@ -1,7 +1,7 @@
 :root{
     font-family: sans-serif;
 }
-body {
+body { //storlek på body
     display: grid;
     width: 98vh;
     height: 100vh;
@@ -27,14 +27,14 @@ header{
     align-items: center;
     width: 100%;
 
-        h1{
+        h1{ //text längst upp
             color: rgb(192 ,130 ,82);
             text-align: center;
             margin: 0;
             width: 100%;
         }
 
-        button{
+        button{ //clear knapp
             border: 2px solid black;
             background-color: gray;
             color: rgb(181,207,154);
@@ -54,15 +54,40 @@ main{
     grid-template-columns: auto auto auto;
     gap: 0.625rem;
     
-    div{
-        border: 3px solid black;
-        bottom: 5px;
-        right: 5px;
-    }
-    .vinnare{
-        border: none;
-    }
+        div{
+            border: 3px solid black;
+            bottom: 5px;
+            right: 5px;
+        }
+
+        div:nth-child(9)  { //vinnarens plats
+            display: grid;
+            grid-template-columns: auto auto !important; 
+            border: none;
+            grid-row: 6;
+            grid-column: 3;
     
+            > p {
+                color: white;
+                grid-row: 4;
+                grid-column: 1;
+                margin-bottom: 0;
+                padding-top: 0;
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+
+            input{
+                background-color: lightgreen !important;
+                grid-row: 4;
+                grid-column: 2;
+                border:none;
+                height: 50%;
+        
+                color: black !important;
+            } 
+        }
+
     section{
         display: flex;
     }
@@ -80,47 +105,23 @@ main{
         display: inline-block;
         padding-left: 0.625rem;
     }
-
-    .vinnare{
-
-        display: grid;
-        grid-template-columns: auto auto !important; 
-        border: none;
-        grid-row: 6;
-        grid-column: 3;
-    }
-    .vinnare p {
-        color: white;
-
-        grid-row: 4;
-        grid-column: 1;
-        margin-bottom: 0;
-        padding-top: 0;
-        padding-right: 10px;
-        padding-left: 10px;
-    }
-    .vinnare input{
-        background-color: lightgreen !important;
-        grid-row: 4;
-        grid-column: 2;
-        border:none;
-        height: 50%;
-        color: black !important;
-    } 
-    .round-1 {
+    div:nth-child(1),//första raden från vänster
+    div:nth-child(2),
+    div:nth-child(3),
+    div:nth-child(4){
         display: grid;
         grid-column: 1;
     }
-    .match1 {
+    div:nth-child(1) {
         grid-row: 1;
     }
-    .match2 {
+    div:nth-child(2) {
         grid-row: 3;
     }
-    .match3 {
+    div:nth-child(3) {
         grid-row: 5;
     }
-    .match4 {
+    div:nth-child(4){
         grid-row: 7;
     }
 
@@ -129,13 +130,13 @@ main{
     -webkit-appearance: none;
     margin: 0;
     }
-    input[type=text]{
+    input[type=text]{ //text area
         background-color: rgb(17 ,15 ,20);
         border:1px solid black;
         width: 50%;
         color:white ;
     }
-    input[type=number]{
+    input[type=number]{ //number area
         background-color:rgb(50 ,47 ,59);
         border:1px solid black;
         width: 50%;
@@ -144,7 +145,7 @@ main{
     input {
         margin: 0;
     }
-    p{
+    p{ //text i bracket
         height: auto;
         width: auto;
         grid-column: 2;
@@ -152,28 +153,29 @@ main{
         font-size: 1.25rem;
         text-align: center;
         padding-top: 3.125rem;
-        color: rgb(255 ,40 ,74);
+        color: rgb(192 ,130 ,82);
         margin: 0;
         padding: 0;
     }
-    img{
+    img{ //sponsor bild
         width: 100%;
     }
-    .round-2 {
+    div:nth-child(5), //andra raden i bracket system
+    div:nth-child(7) {
         display: grid;
         grid-column: 2;
     }
-    .semifinal1 {
+    div:nth-child(5) {
         grid-column: 2;
         margin-left: 1.25rem;
         grid-row: 2;
     }
-    .semifinal2 {
+    div:nth-child(7) {
         margin-left: 1.25rem;
         grid-row: 6;
     }
     
-    .round-3 {
+    div:nth-child(8) { //sista raden i bracket system
         display: grid;
         margin-right: 1.25rem;
         grid-column: 3;
@@ -204,8 +206,8 @@ footer{
         display: flex;
         margin-left: 5px;
     }
-    .margin {
-        margin-left: 3.125rem;
+    section:nth-child(3) > p {
+        margin-left: 2.125rem;
     }
     h5 {
         border-top:1px solid black;

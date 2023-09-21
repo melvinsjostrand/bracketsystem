@@ -1,7 +1,7 @@
 :root{
     font-family: sans-serif;
 }
-body {
+body { //storlek på body
     display: grid;
     width: 98vh;
     height: 100vh;
@@ -27,22 +27,22 @@ header{
     align-items: center;
     width: 100%;
 
-        h1{
-            color: rgb(255 , 40 , 74);
-            text-align: center;
-            margin: 0;
-            width: 100%;
-        }
+    h1{ //text längst upp
+        color: rgb(255 , 40 , 74);
+        text-align: center;
+        margin: 0;
+        width: 100%;
+    }
 
-        button{
-            border: 2px solid black;
-            background-color: gray;
-            color: rgb(181,207,154);
-            border-radius: 30%;
-            text-align: center;
-            font-size: 16px;
-            margin-right: 0.625rem;
-        }
+    button{ //clear knapp
+        border: 2px solid black;
+        background-color: gray;
+        color: rgb(181,207,154);
+        border-radius: 30%;
+        text-align: center;
+        font-size: 16px;
+        margin-right: 0.625rem;
+    }
 }
 
 main{
@@ -54,42 +54,38 @@ main{
     grid-template-columns: auto auto auto;
     gap: 0.625rem;
     
-        div{
-            border: 3px solid black;
-            bottom: 5px;
-            right: 5px;
-        }
-
-        div:nth-child(9)  {
-            display: grid;
-            grid-template-columns: auto auto !important; 
-            border: none;
-            grid-row: 6;
-            grid-column: 3;
-    
-            > p {
-                color: white;
-                grid-row: 4;
-                grid-column: 1;
-                margin-bottom: 0;
-                padding-top: 0;
-                padding-right: 10px;
-                padding-left: 10px;
-            }
-
-            input{
-                background-color: lightgreen !important;
-                grid-row: 4;
-                grid-column: 2;
-                border:none;
-                height: 50%;
-        
-                color: black !important;
-            } 
-        }
+    div{
+        border: 3px solid black;
+        bottom: 5px;
+        right: 5px;
+    }
 
     section{
         display: flex;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type=text]{ //text area
+        background-color: rgb(17 ,15 ,20);
+        border:1px solid black;
+        width: 50%;
+        color:white ;
+    }
+
+    input[type=number]{ //number area
+        background-color:rgb(50 ,47 ,59);
+        border:1px solid black;
+        width: 50%;
+        color: white;
+    }
+
+    input {
+        margin: 0;
     }
 
     h2{
@@ -105,7 +101,25 @@ main{
         display: inline-block;
         padding-left: 0.625rem;
     }
-    div:nth-child(1),
+
+    p{ //text i bracket
+        height: auto;
+        width: auto;
+        grid-column: 2;
+        grid-row: 4;
+        font-size: 1.25rem;
+        text-align: center;
+        padding-top: 3.125rem;
+        color: rgb(255 ,40 ,74);
+        margin: 0;
+        padding: 0;
+    }
+
+    img{ //sponsor bild
+        width: 100%;
+    }
+
+    div:nth-child(1),//första raden från vänster
     div:nth-child(2),
     div:nth-child(3),
     div:nth-child(4){
@@ -125,42 +139,36 @@ main{
         grid-row: 7;
     }
 
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+
+    div:nth-child(9)  { //vinnarens plats
+        display: grid;
+        grid-template-columns: auto auto !important; 
+        border: none;
+        grid-row: 6;
+        grid-column: 3;
+
+        > p {
+            color: white;
+            grid-row: 4;
+            grid-column: 1;
+            margin-bottom: 0;
+            padding-top: 0;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
+        input{
+            background-color: lightgreen !important;
+            grid-row: 4;
+            grid-column: 2;
+            border:none;
+            height: 50%;
+    
+            color: black !important;
+        } 
     }
-    input[type=text]{
-        background-color: rgb(17 ,15 ,20);
-        border:1px solid black;
-        width: 50%;
-        color:white ;
-    }
-    input[type=number]{
-        background-color:rgb(50 ,47 ,59);
-        border:1px solid black;
-        width: 50%;
-        color: white;
-    }
-    input {
-        margin: 0;
-    }
-    p{
-        height: auto;
-        width: auto;
-        grid-column: 2;
-        grid-row: 4;
-        font-size: 1.25rem;
-        text-align: center;
-        padding-top: 3.125rem;
-        color: rgb(255 ,40 ,74);
-        margin: 0;
-        padding: 0;
-    }
-    img{
-        width: 100%;
-    }
-    div:nth-child(5),
+
+    div:nth-child(5), //andra raden i bracket system
     div:nth-child(7) {
         display: grid;
         grid-column: 2;
@@ -175,12 +183,13 @@ main{
         grid-row: 6;
     }
     
-    div:nth-child(8) {
+    div:nth-child(8) { //sista raden i bracket system
         display: grid;
         margin-right: 1.25rem;
         grid-column: 3;
         grid-row: 4;
     }
+
 }
 
 footer{
@@ -190,25 +199,6 @@ footer{
     display: grid;
     height: 100%;
     
-    input[type=text]{
-        background-color: rgb(111, 106 ,124);
-        color: white;
-    }
-    label{
-        display: none;
-    }
-    input {
-        margin-right: 30px;
-        height: 0.938rem;
-        width: 300px;
-        margin-top: 2px;
-        margin-bottom: 0;
-        display: flex;
-        margin-left: 5px;
-    }
-    section:nth-child(3) > p {
-        margin-left: 2.125rem;
-    }
     h5 {
         border-top:1px solid black;
         border-bottom:1px solid black;
@@ -218,13 +208,39 @@ footer{
         font-size: 1.25rem;
         margin-top: 1.25rem;
     }
+
+    label{
+        display: none;
+    }
+
+    input {
+        margin-right: 30px;
+        height: 0.938rem;
+        width: 300px;
+        margin-top: 2px;
+        margin-bottom: 0;
+        display: flex;
+        margin-left: 5px;
+    }
+
+    input[type=text]{
+        background-color: rgb(111, 106 ,124);
+        color: white;
+    }
+
     p{
         color: white;
     }
+
     a{
         color: rgb(255 ,40 ,74);
     }
+
     section :nth-child(2) {
         margin: 0;
-        }
+    }
+
+    section:nth-child(3) > p {
+        margin-left: 2.125rem;
+    }
 }
