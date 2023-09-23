@@ -3,7 +3,7 @@
 }
 body { //storlek på body
     display: grid;
-    width: 98vh;
+    width: 80vh;
     height: 100vh;
     grid-template-rows: 50px auto 300px;
     grid-template-areas: 
@@ -228,11 +228,13 @@ footer{
         color: white;
     }
 
-    p{
+    p{  
+        font-size: 15px;
         color: white;
     }
 
     a{
+        font-size: 15px;
         color: rgb(255 ,40 ,74);
     }
 
