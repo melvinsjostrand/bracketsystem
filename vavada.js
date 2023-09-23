@@ -4,7 +4,7 @@ let scoreInputs = [];
 let playerInput = [];
 let clear;
 let pos;
-
+let Vavada;
 // JavaScript function to update the bracket with player names
 function init() {
    scoreInputs = document.querySelectorAll('input[type="number"]');
@@ -26,6 +26,11 @@ function init() {
    pos = 8;
    console.log("pos " + pos);
    ScoreInput();
+   Vavada = document.getElementById("vavadabracket");
+   Vavada.addEventListener("click", event =>{
+      verify();
+   })
+  
 } // End init
 window.onload = init; // Se till att init aktiveras då sidan är inladdad
 
@@ -112,9 +117,6 @@ function resetTournament() {
 }
 
 
-
-
-
 //id 0 och 1 ska vara kopplade till plats 8
 //id 2 och 3 ska vara kopplade till plats 9
 //id 4 och 5 ska vara kopplade till plats 10
@@ -122,3 +124,41 @@ function resetTournament() {
 //id 8 och 9 ska vara kopplade till plats 12
 //id 10 och 11 ska vara kopplade till plats 13
 //id 12 och 13 ska vara kopplade till plats 14
+
+
+
+
+
+
+
+
+
+
+
+
+//logga in sak, ifall vi ska lägga på server. endast admin ska nå
+async function verify(){
+   let VavadaBracket = document.getElementById("vavadabracket");
+   let userverify = "";
+   let response = await fetch(userverify, {
+       headers:{
+           "Authorization": localStorage.getItem("GUID")
+       }
+   });
+
+   let role = await response.text();
+   console.log(role);
+   if(role==="standard"){
+       uppload.addEventListener("click",event=> {
+           location.href = "https://new2.heaton.nu/";
+           VavadaBracket.remove();
+       });
+
+   }
+   else if(role==="Admin"){
+       uppload.addEventListener("click",event=> {
+       location.href = "Vavada.html";
+       });
+   }
+   return role;
+}

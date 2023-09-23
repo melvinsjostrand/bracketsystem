@@ -1,0 +1,18 @@
+div {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+}
+div a {
+  text-decoration: none;
+  font-size: 50px;
+  background-color: black;
+  text-align: center;
+}
+div a:nth-child(1) {
+  margin-bottom: 100px;
+  color: red;
+}
+div a:nth-child(2) {
+  color: orange;
+}/*# sourceMappingURL=konto.css.map */
