@@ -31,5 +31,7 @@ async function login(){
         //inloggad
         localStorage.setItem("GUID" , key)
         location.href = "konto.html";
+    } else{
+        console.log("något blev fel. Typ lösenord/mail");
     }
 }

@@ -32,6 +32,8 @@ function init() {
    })
   
 } // End init
+
+
 window.onload = init; // Se till att init aktiveras då sidan är inladdad
 
 
