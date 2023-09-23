@@ -94,13 +94,6 @@ function updateScore(index, position) {
    }
 }
 
-
-// JavaScript function to reset the tournament
-function resetTournament() {
-   location.reload();
-}
-
-
 function ScoreInput() {
    scoreInputs = document.querySelectorAll('input[type="number"]');
    console.log(scoreInputs);
@@ -119,3 +112,20 @@ function ScoreInput() {
       });
    }
 }
+
+// JavaScript function to reset the tournament
+function resetTournament() {
+   location.reload();
+}
+
+
+
+
+
+//id 0 och 1 ska vara kopplade till plats 8
+//id 2 och 3 ska vara kopplade till plats 9
+//id 4 och 5 ska vara kopplade till plats 10
+//id 6 och 7 ska vara kopplade till plats 11
+//id 8 och 9 ska vara kopplade till plats 12
+//id 10 och 11 ska vara kopplade till plats 13
+//id 12 och 13 ska vara kopplade till plats 14
