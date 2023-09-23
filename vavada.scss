@@ -32,16 +32,21 @@ header{
         text-align: center;
         margin: 0;
         width: 100%;
+    
+        font-size: 30px;
     }
 
     button{ //clear knapp
         border: 2px solid black;
         background-color: gray;
         color: rgb(181,207,154);
-        border-radius: 30%;
+        border-radius: 86px;
         text-align: center;
-        font-size: 16px;
+        font-size: 25px;
+        height: 80%;
         margin-right: 0.625rem;
+        text-shadow: 0 0 11px rgb(181,207,154);
+        
     }
 }
 
@@ -242,7 +247,12 @@ footer{
         margin: 0;
     }
 
-    section:nth-child(3) > p {
-        margin-left: 2.125rem;
-    }
+    section:nth-child(3) {
+        p{
+            padding-left: 10px;
+        }
+        h5{
+            padding-left: 10px;
+        }
+    }   
 }

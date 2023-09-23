@@ -57,14 +57,10 @@ function updateScore(index, position) {
             
                 score1 = parseFloat(scoreInputs[index].value); //kan inte läsa av value andra rundan
                 score2 = parseFloat(scoreInputs[index+1].value);
-
             }else{
          
                 score1 = parseFloat(scoreInputs[index-1].value); //kan inte läsa av value andra rundan
                 score2 = parseFloat(scoreInputs[index].value);
-            
-            
-            
             }            
 
 
@@ -89,8 +85,6 @@ function updateScore(index, position) {
          //hur ska vi lägga upp det ifall det blir lika en match. just nu blir det pos++ vi måste göra så pos är samma som den va under den matchen
 
       }
-
-
    }
 }
 
@@ -108,7 +102,6 @@ function ScoreInput() {
             i++;
             pos++;
          }
-
       });
    }
 }
