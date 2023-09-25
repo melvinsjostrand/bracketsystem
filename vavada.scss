@@ -1,5 +1,5 @@
 :root{
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 body { //storlek på body
     display: grid;
@@ -14,7 +14,7 @@ body { //storlek på body
     margin: 0;
     font-size: 1.25rem;
     border: 2px solid black;
-    position: fixed;
+
     top: 0;
     bottom: 0;
 }
@@ -98,7 +98,7 @@ main{
         text-align: center;
         color: rgb(255,40 ,74);
         width: auto;
-        height: 100%;
+        height: auto;
         margin: 0;
         font-size: 1.3rem;
         border-left: 1px solid black;
@@ -222,10 +222,11 @@ footer{
         margin-right: 30px;
         height: 0.938rem;
         width: 300px;
-        margin-top: 2px;
+        margin-top: 0;
+        padding: 0;
         margin-bottom: 0;
-        display: flex;
         margin-left: 5px;
+        border: none;
     }
 
     input[type=text]{
@@ -243,6 +244,9 @@ footer{
         color: rgb(255 ,40 ,74);
     }
 
+    section:nth-child(1) input{
+        width: 90%;
+    }
     section :nth-child(2) {
         margin: 0;
     }
@@ -250,6 +254,7 @@ footer{
     section:nth-child(3) {
         p{
             padding-left: 10px;
+            padding-right: 10px;
         }
         h5{
             padding-left: 10px;
